@@ -1,0 +1,30 @@
+scale: BRIAN
+long_name: Biological Rhythms Interview of Assessment in Neuropsychiatry 
+items:
+  BRIAN_1_1: IS-problem_FallingAsleep
+  BRIAN_1_2: IS-problem_WakingUp
+  BRIAN_1_3: IS-problem_GetOutOfBed
+  BRIAN_1_4: IS-feelRested
+  BRIAN_1_5: IS-problem_SwitchingOff
+  BRIAN_2_6: IS-problem_WorkActivity
+  BRIAN_2_7: IS-problem_HouseholdActivity
+  BRIAN_2_8: IS-problem_PhysicalActivity
+  BRIAN_2_9: IS-problem_DailyActivity
+  BRIAN_2_10: IS-problem_Libido
+  BRIAN_3_11: IS-problem_Communication
+  BRIAN_3_12: IS-electricDeviceOveruse
+  BRIAN_3_13: IS-problem_synchronizeActivityWithPartner
+  BRIAN_3_14: IS-problem_attendingToSigOther
+  BRIAN_4_15: IS-problem_scheduledMeals
+  BRIAN_4_16: IS-skipMeals
+  BRIAN_4_17: IS-problem_eatingRegularAmount
+  BRIAN_4_18: IS-problem_useStimModeration
+  BRIAN_5_19: IS-energizedAtNight
+  BRIAN_5_20: IS-moreProductiveInMorning
+  BRIAN_5_21: IS-dayNightCycleReversed
+  BRIAN_Sleep_Tot: SS-sleep
+  BRIAN_Act_Tot: SS-generalActivity
+  BRIAN_Social_Tot: SS-social
+  BRIAN_Eat_Tot: SS-eatingPattern
+  BRIAN_Tot: TS-totalScore
+  BRIAN_Chrono_Tot: SS-chronotype

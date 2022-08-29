@@ -1,0 +1,25 @@
+scale: ATFH
+long_name: Antidepressant Treatment History Form
+items:
+  AMITRIPTYLINE: IS-Amitriptyline
+  ARIPIPRAZOLE: IS-Aripiprazole
+  BAT: IS-BehActivTherapy
+  BUPROPION: IS-Buproprion
+  CBT: IS-CogBehTherapy
+  CITALOPRAM: IS-Citalopram
+  DESVENLAFAXINE: IS-Desvenlaflaxine
+  DULOXETINE: IS-Duloxetine
+  ESCITALOPRAM: IS-Escitalopram
+  FLUOXETINE: IS-Fluoxetine
+  MIRTAZAPINE: IS-Mirtazapine
+  OLANZAPINE: IS-Olanzapine
+  OLANZAPINE_FLUOXETINE: IS-OlanzapineFluoxetine
+  PAROXETINE: IS-Paroxetine
+  QUETIAPINE: IS-Quetiapine
+  SERTRALINE: IS-Sertraline
+  TRAZODONE: IS-Trazodone
+  VALPROIC_ACID: IS-ValproicAcid
+  VENLAFAXINE: IS-Venflafaxine
+  ATHF_CUR_ADEQUATE: IS-NumAdeqTreat_curMDDEpisode
+  ATHF_CUR_INADEQUATE: IS-NumInadqtreat_curMDDEpisode
+  ATHF_CUR_TOTAL: IS-numMedUsed_curMDDEpisode

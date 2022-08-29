@@ -1,0 +1,21 @@
+scale: QIDS
+long_name: Quick Inventory of Depressive Symptomatology, Self-Report 
+items:
+  QIDS_SR_1: IS-fallingAsleep
+  QIDS_SR_10: IS-concentration
+  QIDS_SR_11: IS-viewOfSelf
+  QIDS_SR_12: IS-suicidalThoughts
+  QIDS_SR_13: IS-generalInterest
+  QIDS_SR_14: IS-energyLevel
+  QIDS_SR_15: IS-slowedDown
+  QIDS_SR_16: IS-restless
+  QIDS_SR_2: IS-sleepDuringNight
+  QIDS_SR_3: IS-wakeTooEarly
+  QIDS_SR_4: IS-sleepTooMuch
+  QIDS_SR_5: IS-feelSad
+  QIDS_SR_6: IS-decreasedAppetite
+  QIDS_SR_7: IS-increasedAppetite
+  QIDS_SR_8: IS-decreasedWeight_last2wks
+  QIDS_SR_9: IS-increasedWeight_last2wks
+  QIDS_OVERL_SEVTY: TS-QIDS_severity
+  QIDS_ATYPICAL: SS-QIDS_atypicalScore

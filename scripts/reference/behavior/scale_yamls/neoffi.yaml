@@ -1,0 +1,37 @@
+scale: PSQI
+long_name: Pittsburgh Sleep Quality Index 
+items:
+  psqi_001: IS-timeBed_pastMo
+  psqi_002: IS-timeTillFallAsleep_pastMo
+  psqi_003: IS-timeWokeUp_pastMo
+  psqi_004: IS-timeActualAsleep_pastMo
+  psqi_005a: IS-cantSleepWithin30min
+  psqi_005b: IS-wakeMiddleNight
+  psqi_005c: IS-wakeToUseBathroom
+  psqi_005d: IS-cantBreatheComfortably
+  psqi_005e: IS-coughSnoreLoudly
+  psqi_005f: IS-feelCold
+  psqi_005g: IS-feelHot
+  psqi_005h: IS-badDreams
+  psqi_005i: IS-havePain
+  psqi_005j: IS-otherReasons
+  psqi_005j_comment: IS-otherReasonsComment
+  psqi_006: IS-rateSleepQuality_pastMo
+  psqi_007: IS-sleepMed_pastMo
+  psqi_008: IS-troubleAwakeDriving_pastMo
+  psqi_009: IS-keepUp_pastMo
+  psqi_010: IS-bedPartner
+  psqi_010a: IS-bedPartnerSnoring
+  psqi_010b: IS-bedPartnerBreathing
+  psqi_010c: IS-bedPartnerLegTwitch
+  psqi_010d: IS-bedPartnerConfusedSleep
+  psqi_010e: IS-bedPartnerOther
+  psqi_010e_comment: IS-bedPartnerOther_comment
+  PSQIDURAT: SS-sleepDuration
+  PSQIDISTB: SS-sleepDisturbance
+  PSQILATEN: SS-sleepLatency
+  PSQIDAYDYS: SS-dayDysfunction
+  PSQIHSE: SS-sleepEfficiency
+  PSQISLPQUAL: SS-sleepQuality
+  PSQIMEDS: SS-sleepMeds
+  PSQI_TOT: TS-PSQI_total

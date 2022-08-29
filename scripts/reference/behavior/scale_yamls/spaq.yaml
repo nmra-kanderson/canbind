@@ -1,0 +1,6 @@
+scale: SPAQ
+long_name: Seasonal Pattern Assessment Questionnaire 
+items:
+  SPAQ_Global_Seasonality: TS-globalSeasonalityScore
+  SPAQ_Summer: SS-winterSubtype
+  SPAQ_Winter: SS-summerSubType

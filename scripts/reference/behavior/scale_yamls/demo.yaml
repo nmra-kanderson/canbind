@@ -1,0 +1,28 @@
+scale: DEMO
+long_name: Demographics
+items:
+  AGE: IS-Age
+  SEX: IS-Sex
+  EDUC: IS-Education
+  EMPLOY_STATUS: IS-EmployStatus
+  HANDEDNESS: IS-Handedness
+  HSHLD_INCOME: IS-HouseholdIncome
+  JOB_CLASS: IS-JobCategory
+  MRTL_STATUS: IS-MaritalStatus
+  ethncty_cdn___1: IS-Ethnic_Aboriginal
+  ethncty_cdn___2: IS-Ethnic_Arab
+  ethncty_cdn___3: IS-Ethnic_Black
+  ethncty_cdn___4: IS-Ethnic_Chinese
+  ethncty_cdn___5: IS-Ethnic_EastAsian
+  ethncty_cdn___6: IS-Ethnic_Filipino
+  ethncty_cdn___7: IS-Ethnic_Japanese
+  ethncty_cdn___8: IS-Ethnic_Jewish
+  ethncty_cdn___9: IS-Ethnic_Korean
+  ethncty_cdn___10: IS-Ethnic_LatinAmHispanic
+  ethncty_cdn___11: IS-Ethnic_SouthAsian
+  ethncty_cdn___12: IS-Ethnic_SoutheastAsian
+  ethncty_cdn___13: IS-Ethnic_WestAsian
+  ethncty_cdn___14: IS-Ethnic_White
+  ethncty_cdn___9996: IS-Ethnic_Other
+  ethncty_cdn___9998: IS-Ethnic_PreferNotAnswer
+  ETHNCTY_CDN_OTH: IS-Ethnic_SpecifyOther

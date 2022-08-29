@@ -1,0 +1,12 @@
+scale: GAD7
+long_name: Generalized Anxiety Disorder, 7-item 
+items:
+  GAD7_1_1: IS-nervousOnEdge
+  GAD7_1_2: IS-cantStopWorrying
+  GAD7_1_3: IS-worryTooMuch
+  GAD7_1_4: IS-troubleRelaxing
+  GAD7_1_5: IS-restless
+  GAD7_1_6: IS-annoyedIrritable
+  GAD7_1_7: IS-afraidSomethingAwful
+  GAD7_2: IS-interfereWithLife
+  GAD7_Tot: TS-GAD7_total

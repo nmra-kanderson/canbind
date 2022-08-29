@@ -1,0 +1,18 @@
+scale: SEXFX
+long_name: Sex Function
+items:
+  SEXFX_DESR_1: IS-desire
+  SEXFX_DESR_2: IS-fantasize
+  SEXFX_DESR_3: IS-interestInitation
+  SEXFX_DESR_4: IS-canFeelExcited
+  SEXFX_ARSL_1_R: IS-difficultyPerforming
+  SEXFX_ARSL_2: IS-arousedWhenTouched
+  SEXFX_ARSL_3: IS-engage
+  SEXFX_ARSL_4_R: IS-diffStayingExcited
+  SEXFX_ORGSM_1: IS-orgasm
+  SEXFX_ORGSM_2_R: IS-orgasmTakesLonger
+  SEXFX_ORGSM_3_R: IS-cantOrgasm
+  SEXFX_SATFCN_1: IS-satisfied
+  SEXFX_SATFCN_2: IS-enjoyRomanticLife
+  SEXFX_FUNCTION: TS-SexFunction_totalScore
+  SEXFX_GSI: TS-GlobalSexualImpression

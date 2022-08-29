@@ -1,0 +1,10 @@
+scale: WHOQOL
+long_name: World Health Organization Quality of Life scale
+items:
+  WHO_QOL_General_QoL: TS-generalQualityOfLife
+  WHO_QOL_Perception_of_health: SS-perceptionOfHealthQOL
+  WHO_QOL_Physical_health_QoL: SS-physicalHealthQOL
+  WHO_QOL_Psychological_health_QoL: SS-psychologicalHealthQOL
+  Social_relationships_QoL: SS-socialQOL
+  WHO_QOL_Environment_QoL: SS-environmentQOL
+

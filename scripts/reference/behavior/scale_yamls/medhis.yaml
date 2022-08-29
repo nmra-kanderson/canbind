@@ -1,0 +1,12 @@
+scale: MEDHIS
+long_name: Medical History
+items:
+  MH_SYS: IS-bodySystemCategory
+  MH_INSTANCE: IS-insuranceNumOfCondition
+  MH_COLL_DATE: IS-medHistDateTime
+  MH_STRT_DATE: IS-medHistStartDate
+  MH_END_DATE: IS-medHistEndDate
+  MH_PRSNT: IS-medHistPresent
+  MH_MEDDRA_TERM: IS-procReportedMedTerms
+  MH_MEDDRA_CAT_ID: IS-idProcMedHistCat
+  MH_MEDDRA_CAT: IS-prcMedHistCat

@@ -1,0 +1,14 @@
+scale: MADRS
+long_name: Montgomery Asberg Depression Rating Scale 
+items:
+  MADRS_APRNT_SDNS: IS-apparentSadness
+  MADRS_CONC_DFCTY: IS-diffConcentrating
+  MADRS_INBLTY_TO_FEEL: IS-inabilityToFeel
+  MADRS_INN_TNSN: IS-innerTension
+  MADRS_LASS: IS-lassitude
+  MADRS_PESS_THTS: IS-pessimism
+  MADRS_RDCD_APTIT: IS-reducedAppetite
+  MADRS_RDCD_SLP: IS-reducedSleep
+  MADRS_RPTRD_SDNS: IS-sadness
+  MADRS_SUICDL_THTS: IS-suicidalThoughts
+  MADRS_TOT_PRO_RATED: TS-MADRS_total

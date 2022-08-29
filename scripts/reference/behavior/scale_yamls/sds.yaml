@@ -1,0 +1,9 @@
+scale: SDS
+long_name: Sheehan Disability Scale 
+items:
+  SDS_1_1: IS-disruptedWork
+  SDS_2_1: IS-disruptedSocial
+  SDS_3_1: IS-distruptedHomeLife
+  SDS_4: IS-daysMissedWork
+  SDS_5: IS-daysUnproductive
+  SDS_Tot: TS-SDS_totalScore

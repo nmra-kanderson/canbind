@@ -1,0 +1,16 @@
+scale: YMRS
+long_name: Young Mania Rating Scale 
+items:
+  YMRS_10_APRNC: IS-appearance
+  YMRS_11_INSGT: IS-insight
+  YMRS_3_SEXL_INTRST: IS-sexualInterest
+  YMRS_4_SLP: IS-sleep
+  YMRS_5_IRBLTY: IS-irritability
+  YMRS_6_SPCH_RATE_AND_AMT: IS-speechRate
+  YMRS_7_LANG_OR_THT_DISRDR: IS-languageThoughDisorder
+  YMRS_8_THT_CTNT: IS-thoughtContent
+  YMRS_9_DSRPTV_OR_AGGR_BHVR: IS-disruptiveBehavior
+  YMRS_ELEV_MOOD: IS-elevatedMood
+  YMRS_INCR_MOT_ACTVTY_OR_ENRG: IS-motorActivityEnergy
+  YMRS_OVERL_SEVTY: TS-YMRS_TotalScore
+  YMRS_IRTBLTY: SS-YMRS_irritability

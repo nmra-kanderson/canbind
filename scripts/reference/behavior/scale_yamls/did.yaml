@@ -1,0 +1,37 @@
+scale: DID
+long_name: Depression Inventory Development 
+items:
+  DID_ACPMNT_TOT: IS-accomplishment
+  DID_ANHDN_TOT: IS-generalAnhedonia
+  DID_APTIT_DECR_TOT: IS-appetiteDescrease
+  DID_APTIT_INCR_TOT: IS-appetiteIncrease
+  DID_CGNTV_TOT: IS-cognitiveSlowing
+  DID_CONC_TOT: IS-diffConcentratino
+  DID_DRV_TOT: IS-drive
+  DID_EMTL_FTG_TOT: IS-emotional
+  DID_ETNG_DECR_TOT: IS-eatingDecreaseInterest
+  DID_ETNG_INCR_TOT: IS-eatingIncreaseInterest
+  DID_EXCTV_TOT: IS-diffExecFunction
+  DID_GUILT_TOT: IS-guilt
+  DID_HDCHS_TOT: IS-headaches
+  DID_HLPSNS_TOT: IS-hopeless
+  DID_HLTH_BTHRD_TOT: IS-physHealthBothered
+  DID_HLTH_INTSTY_TOT: IS-physHealthIntensity
+  DID_HOBBS_TOT: IS-hobbies
+  DID_INSMN_TOT: IS-insomnia
+  DID_IRBLE_INTSTY: IS-angerIrritability
+  DID_MEM_TOT: IS-diffRecentMemory
+  DID_PAIN_AVG_TOT: IS-painAverage
+  DID_PAIN_SEVR_TOT: IS-painMostSevere
+  DID_PAIN_UNPLST_TOT: IS-painUnpleasant
+  DID_PRLNGD_SLP_TOT: IS-prolongedNightSleep
+  DID_RMNTN_TOT: IS-rumination
+  DID_SEX_TOT: IS-sexActivity
+  DID_SLFESTM_TOT: IS-selfEsteem
+  DID_SLPNS_TOT: IS-sleepiness
+  DID_SOCL_FAMILY_TOT: IS-socialActivityFamily
+  DID_SOCL_FRNDS_TOT: IS-socialActivityFriends
+  DID_TNSN_TOT: IS-tension
+  DID_VPS_SENSTN: IS-verbalPainSensation
+  DID_VPS_UNPLNS: IS-verbalPainUnpleasant
+  DID_WKNS_TOT: IS-physWeakness

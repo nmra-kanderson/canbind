@@ -1,0 +1,6 @@
+scale: BMI
+long_name: Body Mass Index
+items:
+  BL_HEIGHT: IS-heightCentimeters
+  BL_WEIGHT: IS-weightKilograms
+  BL_BMI: IS-BMI

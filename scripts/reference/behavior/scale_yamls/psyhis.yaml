@@ -1,0 +1,10 @@
+scale: PSYHIS
+long_name: Psychiatric History
+items:
+  PSYHIS_FH: IS-famPsychiatricHistory
+  PSYHIS_MDD_AGE: IS-ageOnsetMDD
+  PSYHIS_MDE_CUR_ONSET_DATE: IS-onsetCurrentMDDEpisode
+  PSYHIS_MDE_EP_DUR_MO: IS-currentMDDEpisodeDuration
+  PSYHIS_MDE_CUR_TX: IS-isCurrentMDDTreated
+  PSYHIS_MDE_NUM_VERIFIED: IS-numberMDDEpisodes
+  PSYHIS_MDE_ONSET_DATE: IS-dateOnsetFirstMDDEpisode

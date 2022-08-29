@@ -1,0 +1,43 @@
+scale: MINI
+long_name: Mini International Neuropsychiatric Interview 
+items:
+  MINI_AGRPHOBIA_TIME: IS-agoraphobia_TimeFrame
+  MINI_ALCHL_ABUSE_TIME: IS-alcoholAbuse_TimeFrame
+  MINI_ALCHL_DPNDC_TIME: IS-alcoholDepend_TimeFrame
+  MINI_AN_BINGE_TIME: IS-bingeEating_TimeFrame
+  MINI_AN_TIME: IS-anorexia_TimeFrame
+  MINI_APD_TIME: IS-antisocialPers_TimeFrame
+  MINI_BN_TIME: IS-bulimia_TimeFrame
+  MINI_BP_I_DX: IS-bipolarI
+  MINI_BP_I_TIME: IS-bipolarI_TimeFrame
+  MINI_BP_II_DX: IS-bipolarII
+  MINI_BP_II_TIME: IS-bipolarII_TimeFrame
+  MINI_BP_NOS_DX: IS-bipolarNOS
+  MINI_BP_NOS_TIME: IS-bipolarNOS_TimeFrame
+  MINI_GAD_TIME: IS-generalAnxietyDisorder_TimeFrame
+  MINI_HME_DX: IS-hypomanic
+  MINI_HME_TIME: IS-hypomanic_TimeFrame
+  MINI_MDE_DX: IS-majorDepressiveDisorder
+  MINI_MDE_TIME: IS-majorDepressiveDisorder_TimeFrame
+  MINI_MDE_TIME_CUR: IS-majorDepressiveDisorder_current_TimeFrame
+  MINI_MDE_TIME_PAST: IS-majorDepressiveDisorder_past_TimeFrame
+  MINI_MDE_TIME_RECUR: IS-majorDepressiveDisorder_recurrent_TimeFrame
+  MINI_ME_DX: IS-manicEpisode
+  MINI_ME_TIME: IS-manicEpisode_TimeFrame
+  MINI_MED_RULED_OUT: IS-somaticDrugCauseRuledOut
+  MINI_MOOD_DSRDR_PSYCTC_DX: IS-moodDisorderPsychoticFeatures
+  MINI_MOOD_DSRDR_PSYCTC_TIME: IS-moodDisorderPsychoticFeatures_TimeFrame
+  MINI_OCD_TIME: IS-OCD_TimeFrame
+  MINI_PD_DX: IS-PanicDisorder
+  mini_pd_time_cur: IS-PanicDisorder_current_TimeFrame
+  mini_pd_time_life: IS-PaniceDisorder_lifetime_TimeFrame
+  MINI_PRMRY_DX: IS-primaryDiagnosis
+  MINI_PSYCTC_DSRDR_DX: IS-psychoticDisorder
+  MINI_PSYCTC_DSRDR_TIME: IS-psychoticDisorder_TimeFrame
+  MINI_PTSD_TIME: IS-PTSD_TimeFrame
+  MINI_SBSTNC_ABUSE_NONALCHL_TIME: IS-substanceAbuseNonAlc_TimeFrame
+  MINI_SBSTNC_DPNDC_NONALCHL_TIME: IS-substanceDependNonAlc_TimeFrame
+  MINI_SOCL_PHOBIA_DX: IS-socialPhobia
+  MINI_SOCL_PHOBIA_SUBTYPE: IS-socialPhobiaSubtype
+  MINI_SUICDLTY_SCORE_RANGE: IS-suicidality
+  MINI_SUICDLTY_TIME: IS-suicidality_TimeFrame

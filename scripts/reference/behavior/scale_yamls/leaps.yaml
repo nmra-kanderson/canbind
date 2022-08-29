@@ -1,0 +1,18 @@
+scale: LEAP
+long_name: Lam Employment Absence and Productivity Scale 
+items:
+  LAM_0: IS-employed
+  LAM_1: IS-kindOfWork
+  LAM_2: IS-hoursWork_last2wks
+  LAM_3: IS-hoursMissed_last2wks
+  LAM_4_A: IS-lowEnergyMotivation
+  LAM_4_B: IS-poorConcentration
+  LAM_4_C: IS-anxietyIrritability
+  LAM_4_D: IS-lessWorkDone
+  LAM_4_E: IS-poorQualityWork
+  LAM_4_F: IS-makeMistakes
+  LAM_4_G: IS-dontGetAlongWithPeople
+  LAM_TOT_OVERALL: TS-overallWorkImpairment
+  LAM_TOT_Product: SS-productivitySubscale
+  LAM_TOT_Absent: SS-absenteeismSubscale
+

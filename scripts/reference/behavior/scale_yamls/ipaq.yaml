@@ -1,0 +1,28 @@
+scale: IPAQ
+long_name: International Physical Activity Questionnaire 
+items:
+  IPAQ_1: IS-vigorousActivityNumDays_last7days
+  IPAQ_2: IS-vigorousActivityTimeSpent_last7days
+  IPAQ_2_HOUR: IS-vigorousActivityHrsPerDay_last7days
+  IPAQ_2_MIN: IS-vigorousActivityMinutesPerDay_last7days
+  IPAQ_3: IS-moderateActivityNumDays_last7days
+  IPAQ_4: IS-moderateActivityTimeSpent_last7days
+  IPAQ_4_HOUR: IS-moderateActivityHrsPerDay_last7days
+  IPAQ_4_MIN: IS-moderateActivityMinutesPerDay_last7days
+  IPAQ_5: IS-walkNumDays_last7days
+  IPAQ_6: IS-walkTimeSpent_last7days
+  IPAQ_6_HOUR: IS-walkHrsPerDay_last7days
+  IPAQ_6_MIN: IS-walkMinutesPerDay_last7days
+  IPAQ_7: IS-sitNumDays_last7days
+  IPAQ_7_HOUR: IS-sitHrsPerDay_last7days
+  IPAQ_7_MIN: IS-sitMinutesPerDay_last7days
+  Vig_total: SS-vigorousActivity
+  Mod_total: SS-moderateActivity
+  Walking_total: SS-walking
+  Sitting_average: SS-sitting
+  Vig_total_tr: SS-vigorousActivityTruncated
+  Moderate_total_tr: SS-moderateActivityTruncated
+  Walking_total_tr: SS-walkingActivityTruncated
+  MVPA: SS-moderatePlusVigorousActivity
+  MVPA_group: SS-moderatePlusVigorousActivityGroup
+  Vig_group: SS-vigorousActivityGroup

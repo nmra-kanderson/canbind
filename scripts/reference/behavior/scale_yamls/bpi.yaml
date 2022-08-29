@@ -1,0 +1,18 @@
+scale: BPI
+long_name: Brief Pain Inventory
+items:
+  BPI_1: IS-painToday
+  BPI_3: IS-painToday_atWorst_Rating
+  BPI_4: IS-painToday_atLeast_Rating
+  BPI_5: IS-painToday_atAverage_Rating
+  BPI_6: IS-painToday_rightNow_Rating
+  BPI_8: IS-painToday_reliefFromMeds
+  BPI_9_A: IS-painToday_interfere_generalActivity
+  BPI_9_B: IS-painToday_interfere_mood
+  BPI_9_C: IS-painToday_interfere_walkingAbility
+  BPI_9_D: IS-painToday_interfere_normalWork
+  BPI_9_E: IS-painToday_interfere_relationOtherPeople
+  BPI_9_F: IS-painToday_interfere_sleep
+  BPI_9_G: IS-painToday_interfere_enjoyLife
+  BPI_CMPS: TS-compositePainScore
+  BPI_PICS: TS-painInterferenceScore

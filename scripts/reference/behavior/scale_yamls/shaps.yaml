@@ -1,0 +1,32 @@
+scale: SHAPS
+long_name: Snaith-Hamilton Pleasure Scale 
+items:
+  SHAPS_01: IS-tvRadio
+  SHAPS_02: IS-familyFriends
+  SHAPS_03: IS-hobbies
+  SHAPS_04: IS-meal
+  SHAPS_05: IS-bathShower
+  SHAPS_06: IS-smell
+  SHAPS_07: IS-smilingFaces
+  SHAPS_08: IS-appearance
+  SHAPS_09: IS-reading
+  SHAPS_10: IS-beverage
+  SHAPS_11: IS-smallThings
+  SHAPS_12: IS-visualExperience
+  SHAPS_13: IS-helpingOthers
+  SHAPS_14: IS-praise
+  shaps_01_r: IS-tvRadio_RevCode
+  shaps_02_r: IS-familyFriends_RevCode
+  shaps_03_r: IS-hobbies_RevCode
+  shaps_04_r: IS-meal_RevCode
+  shaps_05_r: IS-bathShower_RevCode
+  shaps_06_r: IS-smell_RevCode
+  shaps_07_r: IS-smilingFaces_RevCode
+  shaps_08_r: IS-appearance_RevCode
+  shaps_09_r: IS-reading_RevCode
+  shaps_10_r: IS-beverage_RevCode
+  shaps_11_r: IS-smallThings_RevCode
+  shaps_12_r: IS-visualExperience_RevCode
+  shaps_13_r: IS-helpingOthers_RevCode
+  shaps_14_r: IS-praise_RevCode
+  SHAPS_Tot: TS-SHAPS_totalScore

@@ -1,0 +1,8 @@
+scale: DARS
+long_name: Dimensional Anhedonia Rating Scale 
+items:
+  DARS_Hobbies_Tot: SS-hobbiesLeisure
+  DARS_Food_Tot: SS-foodDrink
+  DARS_Social_Tot: SS-social
+  DARS_Sense_Tot: SS-sensoryExperience
+  DARS_Tot: TS-DARS_total

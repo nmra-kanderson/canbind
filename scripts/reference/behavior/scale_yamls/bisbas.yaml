@@ -1,0 +1,30 @@
+scale: BISBAS
+long_name: Behavioral Inhibition Scale and Behavioral Activation Scale
+items:
+  BIS_1_1: IS-WorkedUpOverUnpleasant
+  BIS_1_2: IS-GoodThingAffectStrongly
+  BIS_1_3: IS-WorryAboutMistakes
+  BIS_1_4: IS-GoAllOutForWants
+  BIS_1_5: IS-WillingTryNewThings
+  BIS_1_6: IS-CriticismHurtsMe
+  BIS_1_7: IS-KeepAtIt
+  BIS_1_8: IS-ExcitedOverOpportunity
+  BIS_1_9: IS-UpsetWhenOthersAngryAtMe
+  BIS_1_10: IS-MoveRightAwayToGetWants
+  BIS_1_11: IS-SpurOfMoment
+  BIS_1_12: IS-EvenIfBadImRarelyNervous
+  BIS_1_12_R: IS-EvenIfBadImRarelyNervous_RevCode
+  BIS_1_13: IS-DoThingsForFun
+  BIS_1_14: IS-GoOutWayToGetWants
+  BIS_1_15: IS-WorriedIveDonePoorly
+  BIS_1_16: IS-CraveExcitement
+  BIS_1_17: IS-EnergizedWhenGetWant
+  BIS_1_18: IS-FewFearsComparedToFriends
+  BIS_1_18_R: IS-FewFearsComparedToFriends_RevCode
+  BIS_1_19: IS-NoHoldsBarred
+  BIS_1_20: IS-ExcitedToWinContest
+  BIS_Tot: TS-BIS
+  BAS_Tot: TS-BAS
+  BISBAS_RR_Tot: SS-RewardResponsiveness
+  BISBAS_DR_Tot: SS-Drive
+  BISBAS_FS_Tot: SS-FunSeeking

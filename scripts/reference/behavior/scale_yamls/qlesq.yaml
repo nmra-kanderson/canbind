@@ -1,0 +1,21 @@
+scale: QLESQ
+long_name: Quality of Life, Enjoyment and Satisfaction Questionnaire, Short Form 
+items:
+  qlesq_0: IS-currentMedications
+  qlesq_1: IS-physicalHealth
+  qlesq_2: IS-mood
+  qlesq_3: IS-work
+  qlesq_4: IS-householdActivities
+  qlesq_5: IS-socialRelationships
+  qlesq_6: IS-familyRelationships
+  qlesq_7: IS-leisureTime
+  qlesq_8: IS-abilityToFunction
+  qlesq_9: IS-libido
+  qlesq_10: IS-economicStatus
+  qlesq_11: IS-livingHousing
+  qlesq_12: IS-getAroundWithoutDizzy
+  qlesq_13: IS-workHobbies
+  qlesq_14: IS-wellBeing
+  qlesq_15: IS-medication
+  qlesq_16: IS-overallLifeSatisfaction_lastWk
+  qlesq_Tot: TS-QLESQ_totalScore
