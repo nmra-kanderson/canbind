@@ -16,7 +16,7 @@ RUN source /opt/qunex/env/qunex_environment.sh && \
     aws configure set aws_session_token  $AWS_SESSION_TOKEN && \
     aws configure set region us-east-1  && \
     mkdir /imaging-features  && \
-    aws s3 cp s3://trestle-curated/imaging_features/reference/ /imaging-features/utils/ --recursive --region=us-east-1  
+    aws s3 cp s3://obi-datalake/research/imaging/datasets/CANBIND/reference/ /imaging-features/utils/reference/ --recursive --region=ca-central-1
 
 ##
 # Dockerfile for QuNex suite
@@ -75,8 +75,4 @@ RUN yum install -y libxml2-devel
 RUN Rscript -e "install.packages('optparse')"
 RUN Rscript -e "install.packages('docstring')"
 RUN Rscript -e "install.packages('igraph')"
-RUN source /opt/qunex/env/qunex_environment.sh && \
-   pip install awscli && \
-   pip install watchdog pandas numpy boto3 pydicom
-ENV PIPELINE_RUN_COMMAND /imaging-features/scripts/EMBARC/fMRI_tasks/01_task_analysis.bash   
-CMD ["sh", "-c", "source  /root/.bashrc;$PIPELINE_RUN_COMMAND"]
+ENTRYPOINT ["bash"]
