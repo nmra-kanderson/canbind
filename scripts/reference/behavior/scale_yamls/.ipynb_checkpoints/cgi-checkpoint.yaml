@@ -1,0 +1,4 @@
+scale: CGI
+long_name: Clinical Global Improvement
+items:
+    CGISI_SEV_OF_ILL: TS-CGISeverity
