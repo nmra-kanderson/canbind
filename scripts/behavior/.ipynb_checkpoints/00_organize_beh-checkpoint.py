@@ -106,6 +106,3 @@ for scale in iter_scales:
 beh_out = '/home/ec2-user/SageMaker/ebs/fsx/organised_raw_data/beh/CANBIND_clinical_baseline.df'
 main_df.to_csv(beh_out, index=None)
 
-from convert_eprime.convert import text_to_csv
-from convert_eprime.utils import remove_unicode
-
