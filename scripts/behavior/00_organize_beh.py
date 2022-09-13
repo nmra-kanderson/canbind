@@ -16,6 +16,18 @@ scale_list = [
     'MEDHIS','NEOFFI','PSYHIS','QLESQ','SEXFX','SPAQ','YMRS'
 ]
 
+for scale in scale_list: 
+    print(scale)
+    scale_dir  = Path(clin_dir, scale)
+    scale_list = []
+    for grp in ['Control', 'MDD']:
+        csv_list = list(scale_dir.glob(f'{grp}/*csv'))
+        if len(csv_list) == 1:
+            scale_df = pd.read_csv(csv_list[0])
+            scale_list.append(scale_df)
+            print(len(csv_list))
+
+
 sessions_dir = Path(base_dir, 'research/imaging/datasets/SRPBS/processed_data/pf-pipelines/qunex-nbridge/studies/CANBIND-20220818-mCcU5pi4/sessions')
 
 
