@@ -14,8 +14,8 @@ RUN source /opt/qunex/env/qunex_environment.sh && \
     aws configure set aws_access_key_id  $AWS_ACCESS_KEY_ID && \
     aws configure set aws_secret_access_key  $AWS_SECRET_ACCESS_KEY && \
     aws configure set aws_session_token  $AWS_SESSION_TOKEN && \
-    aws configure set region us-east-1  && \
-    mkdir /imaging-features  && \
+    aws configure set region us-east-1 && \
+    mkdir /imaging-features && \
     aws s3 cp s3://obi-datalake/research/imaging/datasets/CANBIND/reference/ /imaging-features/utils/reference/ --recursive --region=ca-central-1
 
 ##
