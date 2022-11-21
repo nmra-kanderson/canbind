@@ -1,3 +1,4 @@
+import shutil
 import os
 import glob
 import re
@@ -5,9 +6,7 @@ import h5py
 import inspect
 import pandas as pd
 import nibabel as nb
-import shutil
 import pathlib
-import quilt3 
 import subprocess
 import numpy as np
 from scipy.fftpack import fft
@@ -31,10 +30,7 @@ from constants import QUILT_REF_PACKAGE,TRESTLE_REGISTRY,MRI_CONVERT,MRI_ANATOMI
 import warnings
 warnings.filterwarnings("ignore")
 
-
 import utilities
-# Download reference data
-utilities.download_reference()
 import neuroimage
 from neuroimage import *
 from utilities import *
@@ -44,7 +40,7 @@ from utilities import *
 @click.option('--sessions-dir', type=click.Path(exists=True))
 @click.option('--output-dir')
 @click.option('--regex-session-filter', default=None)
-@click.option('--scans', multiple=True)
+@click.option('--scans', multiple=True, type=str)
 @click.option('--input-scan-pattern', type=str)
 @click.option('--concatenate-scans', is_flag=True)
 @click.option('--concatenate-scan-name', type=str)
@@ -156,10 +152,14 @@ def main(
 
     # Get list of QuNex subdirectories for processing
     session_dirs = get_qunex_dirs(sessions_dir, regex_session_filter)
-
+    scans_ = []
+    for i in scans:
+        scans_.append(i.replace('.',' '))
+    scans = scans_
     # Stage 1: Make Raw and Refined stats files and features
     # --------------------
-    #set_trace()
+    #import pdb
+    #pdb.set_trace()
     #IPython.embed()
     if make_refined: 
         print_feedback('Producing "raw" and "refined" stats files')
@@ -474,7 +474,6 @@ def process_session(
         falff_scan_pattern = input_scan_pattern.replace('_lpss','')
         falff_scan_tuples  = get_dtseries_paths(scans, falff_scan_pattern, session_dir)
 
-
         # --------------
         # Process Task contrasts
         # --------------
@@ -497,16 +496,14 @@ def process_session(
                     # do the copy
                     if new_cope.exists():
                         os.remove(new_cope)
-                    shutil.copyfile(scan_path_c, new_cope)
-                        
+                    shutil.copy(scan_path_c,new_cope)
                     # Copy ZSTAT file
                     new_fname = f'sub-{session_id}_task-{feat_name}_contrast-{contr_name}_stat-zstat_study-{study_name}.dtseries.nii'
                     new_zstat = Path(refined_task_dir, new_fname)
                     # do the copy
                     if new_zstat.exists():
                         os.remove(new_zstat)
-                    shutil.copyfile(scan_path_z, new_zstat)
-
+                    shutil.copy(scan_path_z, new_zstat)
                     stat_files.append(new_cope)
                     stat_files.append(new_zstat)
 
@@ -537,6 +534,7 @@ def process_session(
         # copy and rename original dtseries to the raw/functional output dir
         # keys = bold_number
         # values = full_path_to_orig_dtseries
+        print('copy')
         logger.info('------ COPY DTSERIES ------')
         copy_cii_dict = {}
         for scan_num, scan_name, scan_path in orig_scan_tuples:

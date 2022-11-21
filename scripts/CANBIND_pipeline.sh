@@ -2,40 +2,47 @@
 
 # Build Docker Image
 # cd to imaging features repo
-cd  /home/ec2-user/imaging-features
+cd /home/ubuntu/Projects/canbind
+
 
 # Update below AWS credential variables
 docker build  \
---build-arg AWS_ACCESS_KEY_ID=<aws_saccess_key> \
---build-arg AWS_SECRET_ACCESS_KEY=<aws_saccess_id>\ 
---build-arg AWS_SESSION_TOKEN=<aws_session_token> \
+--build-arg AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
+--build-arg AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+--build-arg AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN \
  -f Dockerfile -t imaging_features .
+
 
 # Set environment variables
 # ---------------------
-
-FSX_PATH=/home/ec2-user/SageMaker/fsx
+FSX_PATH=/home/ubuntu/fsx
 DOCKER_FSX_PATH=/data
 
 # ------------------------------------------
 # Run Docker interactive 
 # ------------------------------------------
 
-docker run -t -v ${FSX_PATH}:${DOCKER_FSX_PATH} -d imaging_features:latest
+sudo docker run -it -v \
+  ${FSX_PATH}:${DOCKER_FSX_PATH} \
+  -v /home/ubuntu/Projects/canbind/utils:/imaging-features/utils \
+  -d imaging_features:latest
 
 
 # jump into interactive session 
-docker exec -it <container_id> bash
+sudo docker exec -it ce351c7e6dfc bash
 
 
 
 # run within the qunex container
 
-pip3 install kedro
+#pip3 install kedro
+
+#source activate imaging_features
+export PYTHONPATH=/opt/env/qunex/bin:$PYTHONPATH
 
 REPO_PATH=/imaging-features
-qunex_dir=/data/CANBIND-20220818-mCcU5pi4/sessions
-feature_dir=/data/CANBIND-imaging-features
+qunex_dir=/data/research/imaging/datasets/CANBIND/processed_data/pf-pipelines/qunex-nbridge/studies/CANBIND-20220818-mCcU5pi4/sessions
+feature_dir=/data/research/imaging/datasets/CANBIND/imaging-features
 
 
 # ---------------------------------
@@ -52,7 +59,6 @@ python3 $REPO_PATH/utils/neumora_struct_pipeline.py \
 
 
 #### CABNP
-
 python3 $REPO_PATH/utils/neumora_struct_pipeline.py \
 --sessions-dir ${qunex_dir} \
 --output-dir ${feature_dir} \
@@ -65,22 +71,22 @@ python3 $REPO_PATH/utils/neumora_struct_pipeline.py \
 
 
 #### YeoPlus
-python3 /imaging-features/utils/neumora_struct_pipeline.py \
+python /imaging-features/utils/neumora_struct_pipeline.py \
   --sessions-dir ${qunex_dir} \
   --output-dir ${feature_dir} \
   --regex-session-filter '(.{7}_(01))' \
   --study-name 'CANBIND' \
-  --cifti-atlas /imaging-features/utils/reference/parcellation/YeoPlus/YeoPlus_Schaefer17Net200_BucknerCBL17Net_MelbourneS3_VentralDC_Brainstem.dlabel.nii \
+  --cifti-atlas /imaging-features/utils/reference/parcellation/YeoPlus/YeoPlus_Schaefer17Net200_CBL17Net_TianS3.dlabel.nii  \
   --cifti-atlas-name 'YeoPlus' \
   --overwrite False \
-  --n-processes 90
+  --n-processes 40
 
 # ---------------------------------
 # Resting State / Functional Features
 # ---------------------------------
 # CABNP atlas
 
-python3 /imaging-features/utils/neumora_rest_pipeline.py \
+/opt/env/qunex/bin/python3 /imaging-features/utils/neumora_rest_pipeline.py \
   --sessions-dir ${qunex_dir} \
   --output-dir ${feature_dir} \
   --regex-session-filter '(.{7}_(01))' \
@@ -92,7 +98,7 @@ python3 /imaging-features/utils/neumora_rest_pipeline.py \
   --cifti-atlas /imaging-features/utils/reference/parcellation/ColeAnticevic/raw/CortexSubcortex_ColeAnticevic_NetPartition_wSubcorGSR_parcels_LR.dlabel.nii \
   --cifti-atlas-name 'CABNP' \
   --n-processes 80 \
-  --make-refined False \
+  --make-refined True \
   --make-production True
 
 
@@ -123,20 +129,18 @@ python3 /imaging-features/utils/neumora_rest_pipeline.py \
 
 # YeoPlus atlas
 
-  python3 /imaging-features/utils/neumora_rest_pipeline.py \
+/opt/env/qunex/bin/python3 /imaging-features/utils/neumora_rest_pipeline.py \
   --sessions-dir ${qunex_dir} \
   --output-dir ${feature_dir} \
   --regex-session-filter '(.{7}_(01))' \
   --scans 'bold faces run-01' --scans 'bold faces run-02' --scans 'bold rest run-01' --scans 'bold anhedonia run-01' --scans 'bold gonogo run-01'  \
-  --concatenate-scans \
-  --concatenate-scan-name 'rest_concatenated' \
-  --input-scan-pattern '_Atlas_s_hpss_res-mVWMWB_lpss.dtseries.nii' \
+  --input-scan-pattern '_Atlas_s_hpss_res-mVWMWB1d_lpss.dtseries.nii' \
   --study-name 'CANBIND' \
-  --cifti-atlas /imaging-features/utils/reference/parcellation/YeoPlus/YeoPlus_Schaefer17Net200_BucknerCBL17Net_MelbourneS3_VentralDC_Brainstem.dlabel.nii \
+  --cifti-atlas /imaging-features/utils/reference/parcellation/YeoPlus/YeoPlus_Schaefer17Net200_CBL17Net_TianS3.dlabel.nii  \
   --cifti-atlas-name 'YeoPlus' \
-  --n-processes 80 \
+  --n-processes 50 \
   --make-refined True \
-  --make-production True
+  --make-production False
 
 # make-production fails at funccon/covariance
 #   ------------------------------

@@ -8,13 +8,12 @@ from distutils.version import StrictVersion
 from pathlib import Path
 from typing import List
 from scipy.fftpack import fft
-
+import shutil
 import nibabel as nib
 import nibabel as nb
 import numpy as np
 import pandas as pd
 
-import reference.parcellation
 from utilities import *
 from constants import QUILT_REF_PACKAGE,TRESTLE_REGISTRY,MRI_CONVERT,MRI_ANATOMICAL_STATS,FREESURFER_HOME,WB_COMMAND,DRSFC,GRAPH_METRICS_SCRIPT
 
@@ -388,7 +387,7 @@ def cifti_parcellate(dense_in, cifti_atlas, parcel_out, logger):
         Full path to the parcellated 
     """
     #print('Parcellated Output: {}'.format(parcel_out))
-    subprocess.call(['wb_command', '-cifti-parcellate', dense_in, cifti_atlas, 'COLUMN', parcel_out],
+    subprocess.call(['/opt/workbench/workbench/bin_rh_linux64/wb_command', '-cifti-parcellate', dense_in, cifti_atlas, 'COLUMN', parcel_out],
                         stdout=subprocess.DEVNULL,
                         stderr=subprocess.STDOUT)
     if logger is not None: 
@@ -470,7 +469,6 @@ def load_parcellation_mapping(parcellation_method):
         A Pandas DataFrame that lists parcels' name,
         parcel index, network, and other details
     """
-    assert parcellation_method in reference.parcellation.options
     path = Path(__file__).parent.parent.joinpath('reference/parcellation/mapping/CABNP.csv')
     mapping = pd.read_csv(path)
     return mapping
@@ -678,9 +676,12 @@ def copy_dtseries_files(study_name, session_id, scan_num, scan_name, scan_path, 
     dest_cii        = Path(out_dir, new_fname)
 
     # do the copy
+    if dest_cii.exists():
+        os.remove(dest_cii)
     if not dest_cii.exists():
-        os.symlink(scan_path, dest_cii)
-    #shutil.copy(scan_path, dest_cii)
+        #os.symlink(scan_path, dest_cii)
+        subprocess.call(['cp', '-fr', '--remove-destination', scan_path, dest_cii])
+        #shutil.copy(scan_path, dest_cii)
 
     if logger is not None: 
         logger.info(f'FUNCTION: {inspect.stack()[0][3]}')

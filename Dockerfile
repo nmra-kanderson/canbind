@@ -10,13 +10,13 @@ RUN echo $AWS_SESSION_TOKEN
 
 RUN source /opt/qunex/env/qunex_environment.sh && \
    pip3 install awscli && \
-    pip3 install watchdog pandas numpy boto3 pydicom && \
-    aws configure set aws_access_key_id  $AWS_ACCESS_KEY_ID && \
-    aws configure set aws_secret_access_key  $AWS_SECRET_ACCESS_KEY && \
-    aws configure set aws_session_token  $AWS_SESSION_TOKEN && \
-    aws configure set region us-east-1 && \
-    mkdir /imaging-features && \
-    aws s3 cp s3://obi-datalake/research/imaging/datasets/CANBIND/reference/ /imaging-features/utils/reference/ --recursive --region=ca-central-1
+   pip3 install watchdog pandas numpy boto3 pydicom && \
+   aws configure set aws_access_key_id  $AWS_ACCESS_KEY_ID && \
+   aws configure set aws_secret_access_key  $AWS_SECRET_ACCESS_KEY && \
+   aws configure set aws_session_token  $AWS_SESSION_TOKEN && \
+   aws configure set region ca-central-1 && \
+   mkdir /imaging-features && \
+   aws s3 cp s3://obi-datalake/research/imaging/datasets/CANBIND/reference/ /imaging-features/utils/reference/ --recursive --region=ca-central-1
 
 ##
 # Dockerfile for QuNex suite
@@ -55,28 +55,25 @@ RUN yum -y install wget
 # Version update to latest
 RUN conda update -n base -c defaults conda
 
-# Create and activate virtual environment to install imaging-features dependencies
-RUN conda create -n imaging_features \
-    && source activate imaging_features
-
-# Copy imaging-features pipeline base code
-COPY . /imaging-features/
-WORKDIR /imaging-features
-
-#Install package dependencies
-RUN yum install -y libjpeg-devel
-RUN yum install -y zlib-devel
-RUN yum install -y libxml2-devel
-RUN  yum -y install freetype-devel
-RUN yum install -y  python3-devel
-RUN pip3 install -r requirements.txt
-RUN pip3 install --user quilt3 
-#RUN pip3 install --user git+https://github.com/Deep-MI/qatools-python.git@freesurfer-module-releases#egg=qatoolspython
-#RUN pip3 install --user --src /imaging-features/utils/ --editable git+https://github.com/Deep-MI/qatools-python.git@freesurfer-module-releases#egg=qatoolspython
 #Install pipeline reference libraries from Quilt
 #setup R configs
-RUN Rscript -e "install.packages('optparse')"
-RUN Rscript -e "install.packages('docstring')"
-RUN Rscript -e "install.packages('igraph')"
+RUN Rscript -e "install.packages('optparse')"  && \
+    Rscript -e "install.packages('docstring')"  && \
+    Rscript -e "install.packages('igraph')"
 
-ENTRYPOINT ["bash"]
+# Create,activate virtual env annd install dependencies
+RUN source activate /opt/env/qunex
+COPY . /imaging-features/
+WORKDIR /imaging-features
+RUN source activate /opt/env/qunex && \
+    conda install -c conda-forge nibabel && \
+    conda install -y --file  requirements.txt
+
+# Copy imaging-features pipeline base code
+
+
+#RUN pip3 install --user git+https://github.com/Deep-MI/qatools-python.git@freesurfer-module-releases#egg=qatoolspython
+#RUN pip3 install --user --src /imaging-features/utils/ --editable git+https://github.com/Deep-MI/qatools-python.git@freesurfer-module-releases#egg=qatoolspython
+
+ENV PIPELINE_RUN_COMMAND /imaging-features/scripts/FASTMAS/fMRI_tasks/fastmas_task_analysis.bash  
+CMD ["sh", "-c", "source activate /opt/env/qunex;$PIPELINE_RUN_COMMAND"]

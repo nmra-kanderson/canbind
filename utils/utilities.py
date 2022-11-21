@@ -7,22 +7,9 @@ __all__ = [
     'extract_filename_components',
     'compile_production_data',
     'print_feedback',
-    'make_directory',
-    'download_reference'
+    'make_directory'
     ]
 
-# run this command before importing any local functions
-def download_reference():
-    # check reference files
-    file_loc = __file__
-    parent_dir = Path(file_loc).parent.resolve()
-    ref_dir    =  Path(parent_dir, 'reference')
-    if not ref_dir.exists():
-        p = quilt3.Package.browse(
-                    QUILT_REF_PACKAGE,
-                    TRESTLE_REGISTRY
-                )
-        p.fetch(dest=parent_dir)
 
         
 def make_directory(dir_path):
